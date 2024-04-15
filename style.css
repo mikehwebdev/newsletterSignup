@@ -9,7 +9,7 @@
   --pale-navy: #36384D;
   --dark-navy:#242742;
   --vermellion:#FF6155;
-  --grey: #19182B;
+  --grey: 	hsla(243, 28%, 13%,0.25);
   /* above needs to be 25% opacity I think and inner aligned */
 }
 
@@ -18,9 +18,152 @@ body {
   place-items: center;
   min-height: 100vh;
   background-color: var(--pale-navy);
+  font-family: 'Roboto', sans-serif;
 }
 
 .card {
   width: 23.4375rem;
   background-color: var(--white);
+}
+
+.card-contents {
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.intro-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--dark-navy);
+}
+
+.benefits-list {
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+.benefit-bullet-point {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--dark-navy);
+  list-style-position: inside;
+  list-style-type: none;
+  background: url('img/tick-icon-small.png') no-repeat;
+  background-size: 21px 21px;
+  padding-left: 2.31rem;
+}
+
+.card-confirmation {
+  display: none;
+  width: 23.4375rem;
+  background-color: var(--white);
+  padding: 0 1.5rem;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 0;
+}
+
+.label-container {
+  display: flex;
+  justify-content: space-between;
+}
+.email-input-label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: var(--dark-navy);
+}
+
+.user-message {
+  color: transparent;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.error-message {
+  color: var(--vermellion);
+}
+
+.error-style {
+  color: var(--vermellion);
+}
+
+.error-background {
+  background-color: hsla(4, 100%, 67%,.15);
+}
+
+.email-input {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 3.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--dark-navy);
+  line-height: 1.5rem;
+  opacity: 1;
+  border: 1px solid var(--grey);
+  padding-left: 1.5rem;
+  border-radius: .5rem;
+}
+
+.submit-btn {
+  height: 3.5rem;
+  background-color: var(--dark-navy);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--white);
+  border-radius: .5rem;
+  margin-top: 1.5rem;
+}
+
+.tick-btn {
+  margin-top: 9.313rem;
+}
+
+.sub-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  color: var(--dark-navy);
+  margin-top: 2.5rem;
+}
+
+.confirmation-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.bold-text {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.dismiss-btn {
+  height: 3.5rem;
+  background-color: var(--dark-navy);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--white);
+  border-radius: .5rem;
+  width: 100%;
+  margin: 16.44rem 0 2.5rem 0;
 }

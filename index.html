@@ -11,24 +11,36 @@
     <title>Newsletter sign-up component</title>
   </head>
   <body>
-    <main class="card">
+    <main class="card" id="card">
       <picture class="main-image-container">
         <!-- <source media="(min-width:768px)" srcset="img/mobile-header-large.png"/> -->
         <img class="main-image" src="/img/mobile-header.png" alt="An abstract of business graphics"/>
       </picture>
-      <h1>Stay updated!</h1>
-      <p class="intro-text">Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul class="benefits-list">
-        <li class="benefit-bullet-point">Product discovery and building what matters</li>
-        <li class="benefit-bullet-point">Measuring to ensure updates are a success</li>
-        <li class="benefit-bullet-point">And much more!</li>
-      </ul>
-      <form>
-        <label class="label" >Email address</label>
-        <input type="email" placeholder="email@company.com"/>
-        <button type="submit">Subscribe to monthly newsletter</button>
-      </form>
+      <div class="card-contents">
+        <h1 class="title">Stay updated!</h1>
+        <p class="intro-text">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="benefits-list">
+          <li class="benefit-bullet-point">Product discovery and building what matters</li>
+          <li class="benefit-bullet-point">Measuring to ensure updates are a success</li>
+          <li class="benefit-bullet-point">And much more!</li>
+        </ul>
+        <form class="email-form" id="email-form">
+          <div class="label-container">
+            <label class="email-input-label" >Email address</label>
+            <p class="user-message">Valid email required</p>
+          </div>
+          <input class="email-input" id="email-input" type="email" name="email-address" placeholder="email@company.com" required/>
+          <button class="submit-btn" type="submit" id="submit-btn">Subscribe to monthly newsletter</button>
+        </form>
+       </div>
+    </div>
     </main>
+    <div class="card-confirmation" id="card-confirmation">
+      <img class="tick-btn" src="/img/tick-icon.png" />
+      <h2 class="sub-title">Thanks for subscribing!</h2>
+      <p class="confirmation-text">A confirmation email has been sent to <span class="bold-text" id="inserted-email"></span>. Please open it and click the button inside to confirm your subscription</p>
+      <button class="dismiss-btn" type="submit" id="dismiss-btn">Dismiss</button>
+    </card>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
