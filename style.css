@@ -10,7 +10,6 @@
   --dark-navy:#242742;
   --vermellion:#FF6155;
   --grey: 	hsla(243, 28%, 13%,0.25);
-  /* above needs to be 25% opacity I think and inner aligned */
 }
 
 body {
@@ -22,7 +21,8 @@ body {
 }
 
 .card {
-  width: 23.4375rem;
+  min-width: 23.4375rem;
+  width: 90%;
   background-color: var(--white);
 }
 
@@ -30,11 +30,16 @@ body {
   padding: 0 1.5rem;
 }
 
+.main-image {
+  width: 100%;
+}
+
 .title {
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 2.5rem;
   margin: 2.5rem 0 1.5rem 0;
+  color: var(--dark-navy);
 }
 
 .intro-text {
@@ -78,6 +83,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .email-input-label {
   font-weight: 700;
   font-size: 0.75rem;
@@ -96,9 +102,9 @@ body {
   color: var(--vermellion);
 }
 
-.error-style {
+/* .error-style {
   color: var(--vermellion);
-}
+} */
 
 .error-background {
   background-color: hsla(4, 100%, 67%,.15);
@@ -110,12 +116,25 @@ body {
   height: 3.5rem;
   font-weight: 400;
   font-size: 1rem;
+  background-color: var()--white;
   color: var(--dark-navy);
   line-height: 1.5rem;
   opacity: 1;
   border: 1px solid var(--grey);
+  border-style: inset;
   padding-left: 1.5rem;
   border-radius: .5rem;
+}
+
+.email-input:hover {
+  border: 1px solid var(--dark-navy);
+  cursor: pointer;
+  
+}
+
+.error {
+  border: 1px solid var(--vermellion);
+  background-color: #FF615526;
 }
 
 .submit-btn {
@@ -128,6 +147,15 @@ body {
   color: var(--white);
   border-radius: .5rem;
   margin-top: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(204.47deg, #FF6A3A 0%, #FF527B 100%);
+    box-shadow: 0px 16px 32px 0px #FF615580;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
 }
 
 .tick-btn {
@@ -166,4 +194,74 @@ body {
   border-radius: .5rem;
   width: 100%;
   margin: 16.44rem 0 2.5rem 0;
+  padding: 0;
+}
+
+@media screen and (min-width:928px) {
+ .card {
+  width: 58rem;
+  height: 40.06rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 2rem;
+ }
+
+ .main-image-container {
+  width: 25rem;
+ }
+
+ .card-contents {
+  width: 23.5rem;
+  padding: 0;
+  margin-left: 2.5rem;
+ }
+
+ .title {
+  margin:  4.5625rem 0 1.5rem 0;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+ }
+
+ .benefit-bullet-point {
+  margin-bottom: 0.63rem;
+ }
+
+ .benefit-bullet-point:last-of-type{
+  margin-bottom: 0;
+ }
+
+ .card-confirmation {
+  width: 31.5rem;
+  height: 32.5rem;
+  padding: 0;
+  border-radius: 2.5rem;
+ }
+
+ .tick-btn {
+  margin: 3rem 0 0 4rem;
+ }
+
+ .sub-title {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin-left: 4rem;
+ }
+
+ .confirmation-text {
+  margin: 1.5rem 4rem 0;
+ }
+
+ .dismiss-btn {
+  margin: 2.5rem 4rem 0 4rem;
+  width: 23.5rem;
+ }
+
+ .dismiss-btn:hover {
+  background: linear-gradient(204.47deg, #FF6A3A 0%, #FF527B 100%);
+  box-shadow: 0px 16px 32px 0px #FF615580;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+ }
 }

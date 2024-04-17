@@ -13,7 +13,7 @@
   <body>
     <main class="card" id="card">
       <picture class="main-image-container">
-        <!-- <source media="(min-width:768px)" srcset="img/mobile-header-large.png"/> -->
+        <source media="(min-width:768px)" srcset="img/mobile-header-large.png"/>
         <img class="main-image" src="/img/mobile-header.png" alt="An abstract of business graphics"/>
       </picture>
       <div class="card-contents">
@@ -27,19 +27,18 @@
         <form class="email-form" id="email-form">
           <div class="label-container">
             <label class="email-input-label" >Email address</label>
-            <p class="user-message">Valid email required</p>
+            <p class="user-message" id="user-message">Valid email required</p>
           </div>
           <input class="email-input" id="email-input" type="email" name="email-address" placeholder="email@company.com" required/>
           <button class="submit-btn" type="submit" id="submit-btn">Subscribe to monthly newsletter</button>
         </form>
        </div>
-    </div>
     </main>
     <div class="card-confirmation" id="card-confirmation">
       <img class="tick-btn" src="/img/tick-icon.png" />
       <h2 class="sub-title">Thanks for subscribing!</h2>
       <p class="confirmation-text">A confirmation email has been sent to <span class="bold-text" id="inserted-email"></span>. Please open it and click the button inside to confirm your subscription</p>
-      <button class="dismiss-btn" type="submit" id="dismiss-btn">Dismiss</button>
+      <button class="dismiss-btn" type="submit" id="dismiss-btn">Dismiss message</button>
     </card>
     <script type="module" src="/main.js"></script>
   </body>
