@@ -102,10 +102,6 @@ body {
   color: var(--vermellion);
 }
 
-/* .error-style {
-  color: var(--vermellion);
-} */
-
 .error-background {
   background-color: hsla(4, 100%, 67%,.15);
 }
@@ -129,7 +125,6 @@ body {
 .email-input:hover {
   border: 1px solid var(--dark-navy);
   cursor: pointer;
-  
 }
 
 .error {
